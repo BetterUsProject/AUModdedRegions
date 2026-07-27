@@ -32,5 +32,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: AUModdedRegions-Nightly
-        path: bin/Release/net6.0/AUModdedRegi
-        ons.dll
+        path: bin/Release/net6.0/AUModdedRegions.dll
