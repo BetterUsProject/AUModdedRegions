@@ -1,0 +1,35 @@
+name: Build AUModdedRegions
+
+on:
+  push:
+    branches:
+      - nightly
+  pull_request:
+    branches:
+      - nightly
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup .NET 6
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '6.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build plugin (Release)
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: AUModdedRegions-Nightly
+        path: bin/Release/net6.0/AUModdedRegions.dll
