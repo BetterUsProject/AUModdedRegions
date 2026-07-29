@@ -1,6 +1,6 @@
 > This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. © Innersloth LLC.
 
-> In the releases, there are BepInEx builds with AUModdedRegions included. BepInEx's [source code is available here](https://github.com/BepInEx/BepInEx) and it is not under MIT Licence like this project. It is under LGPL-v2.1
+> In the releases, there are BepInEx builds with AUModdedRegions included. BepInEx's [source code is available here](https://github.com/BepInEx/BepInEx) and it is not under MIT License like this project. It is under LGPL-v2.1
 
 # AUModdedRegions
 
@@ -45,7 +45,7 @@ Modded EU, Modded AS and Modded NA regions doesn't have a website yet.
 
 For more information, see [Informations](INFO.md).
 
-For mod developers that want to integrate this plugin to their mods, you can. See [licence here](LICENCE).
+For mod developers that want to integrate this plugin to their mods, you can. See [license here](LICENSE).
 
 All of the listed regions use a custom, open-source server called [Impostor](https://github.com/Impostor/Impostor). You can host it yourself on a VPS, a [Raspberry Pi](https://raspberrypi.com) or an old laptop.
 
