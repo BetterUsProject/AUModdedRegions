@@ -3,14 +3,12 @@ name: Build Plugin
 on:
   push:
     branches:
-      - main
-      - master
+      - nightly
     tags:
       - 'v*'
   pull_request:
     branches:
-      - main
-      - master
+      - nightly
   workflow_dispatch:
 
 jobs:

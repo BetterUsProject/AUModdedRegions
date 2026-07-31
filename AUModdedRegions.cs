@@ -22,7 +22,6 @@ namespace AUModdedRegions
             "matchmaker-eu.among.us"
         };
 
-        // La liste des 8 régions moddées à garantir dans le fichier
         private static readonly List<(string Name, string Host)> DefaultModdedRegions = new()
         {
             ("Niko233 (EU)", "https://au-eu.niko233.top"),
@@ -39,7 +38,6 @@ namespace AUModdedRegions
         {
             ProcessAndMergeRegions();
 
-            // Bloque le CleanAndMerge natif d'Among Us pour pas qu'il remette Innersloth
             Harmony.CreateAndPatchAll(typeof(PatchCleanAndMerge));
             Log.LogInfo("AUModdedRegions chargé avec succès !");
         }
@@ -52,7 +50,6 @@ namespace AUModdedRegions
             {
                 JsonNode rootNode;
 
-                // 1. Lire le fichier s'il existe, sinon créer une structure JSON vide
                 if (File.Exists(regionFilePath) && new FileInfo(regionFilePath).Length > 0)
                 {
                     string content = File.ReadAllText(regionFilePath);
@@ -65,7 +62,6 @@ namespace AUModdedRegions
 
                 JsonArray regionsArray = rootNode["Regions"]?.AsArray() ?? new JsonArray();
 
-                // 2. Filtrer et supprimer uniquement les régions Innersloth
                 for (int i = regionsArray.Count - 1; i >= 0; i--)
                 {
                     string regionJson = regionsArray[i]?.ToJsonString() ?? "";
@@ -75,7 +71,6 @@ namespace AUModdedRegions
                     }
                 }
 
-                // 3. Ajouter les 8 régions moddées si elles ne sont pas déjà présentes
                 foreach (var (name, host) in DefaultModdedRegions)
                 {
                     if (!HasRegion(regionsArray, host))
@@ -84,7 +79,6 @@ namespace AUModdedRegions
                     }
                 }
 
-                // 4. Mettre à jour et sauvegarder le fichier
                 rootNode["Regions"] = regionsArray;
                 
                 var options = new JsonSerializerOptions { WriteIndented = true };
