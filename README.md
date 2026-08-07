@@ -10,7 +10,7 @@
   <br />
   <br />
   <a href="#"><img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/version-v1.0.0-blue" alt="Version" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/version-v1.0.1-blue" alt="Version" /></a>
   <a href="#"><img src="https://img.shields.io/badge/--512BD4?logo=.net&logoColor=ffffff)](https://dotnet.microsoft.com/" alt="Dotnet" /></a>
   <a href="#"><img src="https://badgen.net/badge/icon/github?icon=github&label" alt="GitHub" /></a>
   <a href="#"><img src="https://badgen.net/badge/icon/windows?icon=windows&label" alt="Windows" /></a>
