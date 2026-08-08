@@ -5,7 +5,6 @@
 # AUModdedRegions
 
 <p align="center">
-  <!-- Ton Logo -->
   <img src="static/logo.png" alt="Logo" width="300" />
   <br />
   <br />
@@ -22,7 +21,7 @@
 
 AUModdedRegions is a BepInEx plugin that removes Innersloth regions from Among Us and adds other regions that supports [modded handshake](https://github.com/NuclearPowered/Reactor.Impostor).
 
-It adds the following regions (If there is another region other than the modded regions listed below in your regionInfo.json file, they will stay on the regions list but the modded regions listed will all be added):
+It adds the following regions (and the regions added manually in the config file):
 
 - Niko233 (NA)
 - Niko233 (EU)
@@ -47,7 +46,7 @@ For more information, see [Informations](INFO.md).
 
 For mod developers that want to integrate this plugin to their mods, you can. See [license here](LICENSE).
 
-All of the listed regions use a custom, open-source server called [Impostor](https://github.com/Impostor/Impostor). You can host it yourself on a VPS, a [Raspberry Pi](https://raspberrypi.com) or an old laptop.
+All of the listed regions use a custom, open-source server called [Impostor](https://github.com/Impostor/Impostor). You can host it yourself on a VPS, a [Raspberry Pi](https://raspberrypi.com) or an old laptop, and it is under GPL-v3.0 License.
 
 (Niko233 servers are using a custom build of Impostor available [here](https://github.com/NikoCat233/Impostor))
 
