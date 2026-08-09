@@ -16,7 +16,7 @@
   <a href="#"><img src="https://img.shields.io/badge/badges-awesome-green.svg" alt="Badges Are Awesome" /></a>
   <a href="#"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="Licence" /></a>
   <a href="#"><img src="https://img.shields.io/badge/Google%20Gemini-8E75B2?style=flat&logo=googlegemini&logoColor=white" alt="Gemini" /></a>
-  <a href="#"><img src="https://img.shields.io/github/stars/BetterUsProject/AUModdedRegions?style=flat" alt="GitHub Stars" /></a>
+  <a href="stargazers"><img src="https://img.shields.io/github/stars/BetterUsProject/AUModdedRegions?style=flat" alt="GitHub Stars" /></a>
 </p>
 
 AUModdedRegions is a BepInEx plugin that removes Innersloth regions from Among Us and adds other regions that supports [modded handshake](https://github.com/NuclearPowered/Reactor.Impostor).
