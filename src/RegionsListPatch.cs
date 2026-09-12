@@ -29,7 +29,6 @@ namespace RegionInstaller
             float bgWidth = totalColumns > 1 ? (columnWidth * totalColumns) + 1.2f : 5.0f;
             float bgHeight = (maxRows * rowSpacing) + 0.9f;
 
-            // X inchangé, Y remonté un peu
             float startX = -0.1f; 
             float startY = __instance.y_posButton - (isFindGame ? 0.15f : 0.05f);
 
