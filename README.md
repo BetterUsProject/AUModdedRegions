@@ -1,6 +1,6 @@
 > This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. © Innersloth LLC.
 
-> In the releases, there are BepInEx builds with AUModdedRegions included. BepInEx's [source code is available here](https://github.com/BepInEx/BepInEx) and it is not under MIT License like this project. It is under LGPL-v2.1
+> In the releases, there are BepInEx builds with RegionInstaller included. BepInEx's [source code is available here](https://github.com/BepInEx/BepInEx) and it is not under MIT License like this project. It is under LGPL-v2.1
 
 # RegionInstaller
 
