@@ -38,7 +38,7 @@ jobs:
         run: dotnet restore
 
       - name: Build Project (Development)
-        run: dotnet build --configuration Development --no-restore
+        run: dotnet build --no-restore
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
