@@ -1,5 +1,5 @@
 Write-Host "Building project..." -ForegroundColor Cyan
-dotnet build -c Release
+dotnet build src/RegionInstaller.csproj -c Release
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host "Build successful!" -ForegroundColor Green

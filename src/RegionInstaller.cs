@@ -10,15 +10,15 @@ using Il2CppInterop.Runtime.InteropTypes.Arrays;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace AUModdedRegions
+namespace RegionInstaller
 {
     [BepInPlugin(Id, Name, Version)]
     [BepInProcess("Among Us.exe")]
-    public class AUModdedRegionsPlugin : BasePlugin
+    public class RegionInstallerPlugin : BasePlugin
     {
-        public const string Id = "com.nb1x.aumoddedregions";
-        public const string Name = "AUModdedRegions";
-        public const string Version = "1.1.0";
+        public const string Id = "com.nb1x.regioninstaller";
+        public const string Name = "RegionInstaller";
+        public const string Version = "1.2.0";
 
         public static string ConfigPath => Path.Combine(Paths.ConfigPath, "CustomRegions.cfg");
         public Harmony Harmony { get; } = new Harmony(Id);
@@ -34,7 +34,7 @@ namespace AUModdedRegions
 
         public override void Load()
         {
-            Log.LogInfo($"[AUModdedRegions] Loading {Name} v{Version}...");
+            Log.LogInfo($"[RegionInstaller] Loading {Name} v{Version}...");
 
             EnsureConfigFileExists();
             
@@ -53,7 +53,7 @@ namespace AUModdedRegions
             {
                 if (scene.name == "MainMenu")
                 {
-                    Log.LogInfo("[AUModdedRegions] MainMenu scene detected, injecting regions...");
+                    Log.LogInfo("[RegionInstaller] MainMenu scene detected, injecting regions...");
                     InjectRegions(configData.Regions);
                 }
             }));
@@ -208,7 +208,7 @@ Port = 443, 22023
 
                 if (needsRewrite)
                 {
-                    Log.LogInfo("[AUModdedRegions] Differences detected in regionInfo.json (or file missing/empty). Rewriting completely...");
+                    Log.LogInfo("[RegionInstaller] Differences detected in regionInfo.json (or file missing/empty). Rewriting completely...");
                     rootNode = CreateEmptyRegionStructure();
                     JsonArray regionsArray = rootNode["Regions"]?.AsArray() ?? new JsonArray();
 
@@ -245,13 +245,13 @@ Port = 443, 22023
                 }
 
                 var options = new JsonSerializerOptions { WriteIndented = true };
-                File.WriteAllText(regionFilePath, rootNode.ToJsonString(options));
+                File.WriteAllText(regionFilePath, rootNode?.ToJsonString(options));
 
-                Log.LogInfo("[AUModdedRegions] regionInfo.json successfully verified and updated!");
+                Log.LogInfo("[RegionInstaller] regionInfo.json successfully verified and updated!");
             }
             catch (Exception ex)
             {
-                Log.LogError($"[AUModdedRegions] Error while processing regionInfo.json: {ex.Message}");
+                Log.LogError($"[RegionInstaller] Error while processing regionInfo.json: {ex.Message}");
             }
         }
 
@@ -363,7 +363,7 @@ Port = 443, 22023
                 var regionInfo = new StaticHttpRegionInfo(reg.Name, (StringNames)1003, fullUrl, serversArray);
 
                 serverMngr.AddOrUpdateRegion(regionInfo.Cast<IRegionInfo>());
-                Log.LogInfo($"[AUModdedRegions] Region '{reg.Name}' injected into memory.");
+                Log.LogInfo($"[RegionInstaller] Region '{reg.Name}' injected into memory.");
             }
         }
 

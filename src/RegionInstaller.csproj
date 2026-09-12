@@ -3,7 +3,6 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <AssemblyName>RegionInstaller</AssemblyName>
-        <RootNamespace>AUModdedRegions</RootNamespace>
         <Version>1.0.0</Version>
         <LangVersion>latest</LangVersion>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
