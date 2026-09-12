@@ -2,7 +2,7 @@
 
 > In the releases, there are BepInEx builds with AUModdedRegions included. BepInEx's [source code is available here](https://github.com/BepInEx/BepInEx) and it is not under MIT License like this project. It is under LGPL-v2.1
 
-# AUModdedRegions
+# RegionInstaller
 
 <p align="center">
   <img src="static/logo.png" alt="Logo" width="300" />
@@ -19,7 +19,7 @@
   <a href="stargazers"><img src="https://img.shields.io/github/stars/BetterUsProject/AUModdedRegions?style=flat" alt="GitHub Stars" /></a>
 </p>
 
-AUModdedRegions is a BepInEx plugin that removes Innersloth regions from Among Us and adds other regions that supports [modded handshake](https://github.com/NuclearPowered/Reactor.Impostor).
+RegionInstaller is a BepInEx plugin that removes Innersloth regions from Among Us and adds other regions that supports [modded handshake](https://github.com/NuclearPowered/Reactor.Impostor).
 
 It adds the following regions (and the regions added manually in the config file):
 
